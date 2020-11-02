@@ -25,7 +25,7 @@ byte LightPin1 = 2;
 byte LightPin2 = 3;
 byte LightPin3 = 4;
 byte ButtonPin = 12;
-byte LightPMW = 230; // 0 = On, 255 = Off;
+byte LightPMW = 0; // 0 = On, 255 = Off;
 
 // Display variables
 byte Display2_switch = 10; // Switch to Display 2 if at the top X seconds of each minute
@@ -148,9 +148,9 @@ void loop() {
   }
   else{
     // Lights off
-    digitalWrite(LightPin1, HIGH);
-    digitalWrite(LightPin2, HIGH);
-    digitalWrite(LightPin3, HIGH);
+    analogWrite(LightPin1, 255);
+    analogWrite(LightPin2, 255);
+    analogWrite(LightPin3, 255);
   }
 
   
