@@ -45,7 +45,7 @@ void setup() {
   }
 
   // Force updating time (uncomment to do)
-  // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   
   if (! rtc.initialized()) {
     Serial.println("RTC is NOT running!");
